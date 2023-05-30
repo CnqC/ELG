@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5760855281503228508}
   - component: {fileID: 5760855281503228511}
   - component: {fileID: 5760855281503228510}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block1
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1738796827
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0f5d02c51c87c984295a2331674c5f37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 5760855281509346226}
   - component: {fileID: 5760855281509346224}
   - component: {fileID: 5760855281509346227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DeadZone_L
   m_TagString: DeadZone
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 5760855281686096302}
   - component: {fileID: 5760855281686096300}
   - component: {fileID: 5760855281686096303}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DeadZone_R
   m_TagString: DeadZone
   m_Icon: {fileID: 0}
