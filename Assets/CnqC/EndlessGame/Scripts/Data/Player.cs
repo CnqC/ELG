@@ -128,4 +128,22 @@ public class Player : MonoBehaviour, IComponentChecking
         Gizmos.DrawSphere(m_CenterPos,blockCheckingRadius);
     }
 
+
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag(GameTag.Block.ToString()))
+        {
+            Debug.Log("da va cham vs blok");
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag(GameTag.DeadZone.ToString()))
+        {
+            Debug.Log(" da va cham voi deadz");
+        }
+    }
 }
