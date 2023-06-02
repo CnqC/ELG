@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1717776935523429597}
   - component: {fileID: 6835986024040957824}
   - component: {fileID: 3829011946398777682}
+  - component: {fileID: 4059708781516644979}
   m_Layer: 7
   m_Name: Chac_04
   m_TagString: Player
@@ -155,3 +156,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7580707, y: 3.7317853}
   m_EdgeRadius: 0
+--- !u!114 &4059708781516644979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8407866089227018664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de58f27ce351dbb4e82a45832b3dcac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForece: 0
+  blockLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  blockCheckingRadius: 0
+  blockCheckingOffset: 0
+  lanvfx: {fileID: 0}
