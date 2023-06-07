@@ -13,6 +13,8 @@ public class Block : MonoBehaviour,IComponentChecking
     public MoveDirection moveDirection; // hướng di chuyển
     public bool canMove; // ktra xem có cho di chuyển hay k
     public float blockGrap; // khoảng cách giữa 2 block được tạo ở trên scene
+
+    public Sprite[] sprites; // mảng các ảnh của block
     public int minScore;
     public int maxScore;
 
@@ -30,7 +32,12 @@ public class Block : MonoBehaviour,IComponentChecking
 
     public bool IsConponentnull()
     {
-        return m_rb == null || m_Sp == null;
+        bool checking = m_rb == null || m_Sp == null;
+        if (checking) // if checking = true;
+            Debug.Log("Some component is null !! Please check.");
+
+        return checking;
+    
     }
 
     private void Awake()
@@ -115,4 +122,15 @@ public class Block : MonoBehaviour,IComponentChecking
             // lấy cái sortingOrder của block trước cộng thêm 1 và gán cho block sau.
     }
 
+
+    public void ChangeSprite( ref int idx)
+    {
+        if (sprites == null || sprites.Length <= 0 || IsConponentnull()) return; //ktra mảng ảnh block
+
+        // thay đổi sprite
+        m_Sp.sprite = sprites[idx]; // thay đổi hình ảnh ( sprite) của m_sp thông qua hình ảnh trong mảng sprites ở trên
+
+
+
+    }
 }

@@ -24,7 +24,11 @@ public class Player : MonoBehaviour, IComponentChecking
 
     public bool IsConponentnull()
     {
-        return m_rb == null || m_anim == null;
+        bool checking = m_rb == null || m_anim == null;
+        if (checking) // if checking = true;
+            Debug.Log("Some component is null !! Please check.");
+
+        return checking;
     }
 
     private void Awake()
