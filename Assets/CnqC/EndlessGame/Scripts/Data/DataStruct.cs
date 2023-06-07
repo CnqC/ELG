@@ -60,3 +60,23 @@ public enum GameState
     Playing,
     Gameover
 }
+
+// hiện thị ra ngoài 
+[System.Serializable]
+public class LevelItem
+{
+    public int scoreRequire; // điểm số yêu cầu để unlock level mới
+    public Sprite unlockThumb;
+    public Sprite lockThumb;
+    public Sprite levelBG;
+    public Sprite chacPreviewImg;
+
+    public Player playerPb;
+    public Block blockPb;
+    public float spawnTime;
+    public float baseSpeed; // tốc độ di chuyển căn bản của block
+    public float maxSpeed; 
+
+
+
+}
