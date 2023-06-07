@@ -134,6 +134,10 @@ public class Player : MonoBehaviour, IComponentChecking
     {
         if (col.gameObject.CompareTag(GameTag.Block.ToString()))
         {
+            Block block = col.gameObject.GetComponent<Block>();
+            if (block) // nếu block != null
+                block.PlayerLand();
+
             Debug.Log("da va cham vs blok");
         }
     }
