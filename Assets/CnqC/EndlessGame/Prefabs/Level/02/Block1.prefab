@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5094064910069367467}
   - component: {fileID: 5094064910069367464}
   - component: {fileID: 5094064910069367465}
+  - component: {fileID: -4898592582701476850}
   m_Layer: 6
   m_Name: Block1
   m_TagString: Block
@@ -135,6 +136,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.932165, y: 2.0589907}
   m_EdgeRadius: 0
+--- !u!114 &-4898592582701476850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5094064910069367470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a5a5ae7da893945b461f321bd5eeab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  moveDirection: 0
+  canMove: 0
+  blockGrap: 0
+  sprites:
+  - {fileID: 21300000, guid: ca9077c74efdbeb4aa945772e87c44da, type: 3}
+  - {fileID: 21300000, guid: a6558b5fdcea2ed4b88d431b61360c0b, type: 3}
+  - {fileID: 21300000, guid: db511fe30a5dcbe479b8ef6104e04e80, type: 3}
+  - {fileID: 21300000, guid: b6e5789adf811aa409d2835a318cf302, type: 3}
+  - {fileID: 21300000, guid: e1af79b1e242e9d4c8a92c80e7bd1bd6, type: 3}
+  - {fileID: 21300000, guid: dce985a6823c8d645b14fcca01913836, type: 3}
+  - {fileID: 21300000, guid: a9dc26ba67341b24c8cd455c3a93e0b2, type: 3}
+  - {fileID: 21300000, guid: 0a27d1eda2636d04f88d105ae2ea45f7, type: 3}
+  - {fileID: 21300000, guid: 91d2a54dde342d840993cc7d22a8c01e, type: 3}
+  - {fileID: 21300000, guid: 2547165ef194bce4981f924921c24a51, type: 3}
+  - {fileID: 21300000, guid: ca4a21598d5517d41a62da71f2b72bc1, type: 3}
+  minScore: 0
+  maxScore: 0
 --- !u!1 &5094064910075525962
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 893151550912574664}
   - component: {fileID: -888641463271983975}
   - component: {fileID: 482662407633366390}
-  - component: {fileID: 4916908728770725916}
+  - component: {fileID: 6324624574031428275}
   m_Layer: 7
   m_Name: Chac_03
   m_TagString: Player
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5250727470418313493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -156,7 +156,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5884368, y: 3.684682}
   m_EdgeRadius: 0
---- !u!114 &4916908728770725916
+--- !u!114 &6324624574031428275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,10 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de58f27ce351dbb4e82a45832b3dcac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForece: 0
+  jumpForece: 8
   blockLayer:
     serializedVersion: 2
-    m_Bits: 0
-  blockCheckingRadius: 0
-  blockCheckingOffset: 0
-  lanvfx: {fileID: 0}
+    m_Bits: 64
+  blockCheckingRadius: 0.5
+  blockCheckingOffset: 0.6
+  lanvfx: {fileID: 4753135634040271978, guid: 7261a005f083f9d4aafb9d18a0094494, type: 3}

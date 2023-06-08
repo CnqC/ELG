@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2195263388158262016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -168,10 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de58f27ce351dbb4e82a45832b3dcac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForece: 0
+  jumpForece: 8
   blockLayer:
     serializedVersion: 2
-    m_Bits: 0
-  blockCheckingRadius: 0
-  blockCheckingOffset: 0
-  lanvfx: {fileID: 0}
+    m_Bits: 64
+  blockCheckingRadius: 0.5
+  blockCheckingOffset: 0.6
+  lanvfx: {fileID: 5599467981534882447, guid: 631096d25a7ccc540b10c11b1ddea35b, type: 3}

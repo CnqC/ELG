@@ -73,6 +73,9 @@ public class LevelItem
 
     public Player playerPb;
     public Block blockPb;
+
+    public GameObject map;
+
     public float spawnTime;
     public float baseSpeed; // tốc độ di chuyển căn bản của block
     public float maxSpeed; 
