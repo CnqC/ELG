@@ -152,7 +152,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b07a6d42285c0438a13f07f10c7612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels: []
+  levels:
+  - scoreRequire: 0
+    unlockThumb: {fileID: 0}
+    lockThumb: {fileID: 0}
+    levelBG: {fileID: 0}
+    chacPreviewImg: {fileID: 0}
+    playerPb: {fileID: 0}
+    blockPb: {fileID: 0}
+    spawnTime: 0
+    baseSpeed: 0
+    maxSpeed: 0
+  - scoreRequire: 500
+    unlockThumb: {fileID: 0}
+    lockThumb: {fileID: 0}
+    levelBG: {fileID: 0}
+    chacPreviewImg: {fileID: 0}
+    playerPb: {fileID: 0}
+    blockPb: {fileID: 0}
+    spawnTime: 0
+    baseSpeed: 0
+    maxSpeed: 0
+  - scoreRequire: 0
+    unlockThumb: {fileID: 0}
+    lockThumb: {fileID: 0}
+    levelBG: {fileID: 0}
+    chacPreviewImg: {fileID: 0}
+    playerPb: {fileID: 0}
+    blockPb: {fileID: 0}
+    spawnTime: 0
+    baseSpeed: 0
+    maxSpeed: 0
+  - scoreRequire: 0
+    unlockThumb: {fileID: 0}
+    lockThumb: {fileID: 0}
+    levelBG: {fileID: 0}
+    chacPreviewImg: {fileID: 0}
+    playerPb: {fileID: 0}
+    blockPb: {fileID: 0}
+    spawnTime: 0
+    baseSpeed: 0
+    maxSpeed: 0
+  - scoreRequire: 0
+    unlockThumb: {fileID: 0}
+    lockThumb: {fileID: 0}
+    levelBG: {fileID: 0}
+    chacPreviewImg: {fileID: 0}
+    playerPb: {fileID: 0}
+    blockPb: {fileID: 0}
+    spawnTime: 0
+    baseSpeed: 0
+    maxSpeed: 0
+  - scoreRequire: 0
+    unlockThumb: {fileID: 0}
+    lockThumb: {fileID: 0}
+    levelBG: {fileID: 0}
+    chacPreviewImg: {fileID: 0}
+    playerPb: {fileID: 0}
+    blockPb: {fileID: 0}
+    spawnTime: 0
+    baseSpeed: 0
+    maxSpeed: 0
+  - scoreRequire: 0
+    unlockThumb: {fileID: 0}
+    lockThumb: {fileID: 0}
+    levelBG: {fileID: 0}
+    chacPreviewImg: {fileID: 0}
+    playerPb: {fileID: 0}
+    blockPb: {fileID: 0}
+    spawnTime: 0
+    baseSpeed: 0
+    maxSpeed: 0
 --- !u!4 &180499947
 Transform:
   m_ObjectHideFlags: 0
