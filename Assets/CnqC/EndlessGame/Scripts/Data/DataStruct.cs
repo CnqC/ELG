@@ -30,8 +30,8 @@ public enum ChacAnim // lưu lại tham số của phần animator
 public enum GamePref // lưu trữ các key để lưu xuống máy người dùng
 {
     BestScore,
-    LevelPrefix,
-    CurPlayerId, // chỉ của con nhân vật ở level nào mà người chơi đã sở hữu
+    LevelUnlocked,
+    CurLevelId, // chỉ của con nhân vật ở level nào mà người chơi đã sở hữu
     IsMusicOn,
     IsSoundOn // để lưu lại trạng thái của music vs sound là đã bật hay chưa trong phần setting
 }
