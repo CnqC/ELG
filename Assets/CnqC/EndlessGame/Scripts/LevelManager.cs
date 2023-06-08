@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour, ISingleTon
     
     public LevelItem GetLevel()
     {
-        if(levels != null && levels.Length <= 0)
+        if(levels != null && levels.Length > 0)
         {
             // trả về mảng levels và lấy ra chỉ số bằng các chỉ số của level mà mình đã lưu dưới máy người dùng
             return levels[Pref.CurLevelId];
