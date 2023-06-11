@@ -174,4 +174,4 @@ MonoBehaviour:
     m_Bits: 64
   blockCheckingRadius: 0.5
   blockCheckingOffset: 0.6
-  lanvfx: {fileID: 1558974577749209960, guid: cbeae77763d545340a96b1872f7e5e45, type: 3}
+  lanvfxPb: {fileID: 1558974577749209960, guid: cbeae77763d545340a96b1872f7e5e45, type: 3}

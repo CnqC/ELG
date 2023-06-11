@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
             if(checking <= 0.5f)
             {
                 // x = nữa chiều rộng của Camara - 0,3f  
-                Vector3 spawnPos = new Vector3(m_camSize.x/2  - 0.3f, m_blockSpawnPosY, 0f);
+                Vector3 spawnPos = new Vector3(m_camSize.x/2  + 0.3f, m_blockSpawnPosY, 0f);
 
                 WarningSignClone = Instantiate(warningSignPb, spawnPos, Quaternion.identity);
 
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
             }
             else
             {
-                Vector3 spawnPos = new Vector3(-(m_camSize.x / 2 - 0.3f), m_blockSpawnPosY, 0f);
+                Vector3 spawnPos = new Vector3(-(m_camSize.x /2 + 0.3f), m_blockSpawnPosY, 0f);
 
                 WarningSignClone = Instantiate(warningSignPb, spawnPos, Quaternion.identity);
             }
@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
                 {
                     // tạo ra vị trị spawn của các block
                     // vị trí của X của block sẽ = 1 nữa phải trục X của Camara +0.6f ( để block nằm ngoài và di chuyển từ từ vào)
-                    Vector3 spawnPos = new Vector3((m_camSize.x / 2 + 0.6f), m_blockSpawnPosY, 0f);
+                    Vector3 spawnPos = new Vector3((m_camSize.x / 2 - 0.8f), m_blockSpawnPosY, 0f);
 
                     // tạo ra block
                     m_curBlock = Instantiate(blockPrebfab, spawnPos, Quaternion.identity);
@@ -162,7 +162,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
                 else
                 {
                     // vị trí của X của block sẽ = 1 nữa trái  trục X của Camara +0.6f ( để block nằm ngoài và di chuyển từ từ vào)
-                    Vector3 spawnPos = new Vector3(-(m_camSize.x / 2 + 0.6f), m_blockSpawnPosY, 0f);
+                    Vector3 spawnPos = new Vector3(-(m_camSize.x / 2 - 0.8f), m_blockSpawnPosY, 0f);
 
                     // tạo ra block
                     m_curBlock = Instantiate(blockPrebfab, spawnPos, Quaternion.identity);
@@ -196,5 +196,32 @@ public class GameManager : MonoBehaviour,IComponentChecking
             Debug.Log("Some component is null !! Please check.");
 
         return checking;
+    }
+
+    // xử lý gameLogic
+    public void PlayGame()
+    {
+        if (IsConponentnull() ) return;
+
+        // chuyển state thành game
+        state = GameState.Playing;
+
+        StartCoroutine(SpawnBlockCo());
+    }
+
+
+    public void AddScore(int Score)
+    {
+        if (IsConponentnull() || state != GameState.Playing) return; //add score lúc đang choi
+
+        m_score += Score;
+        Pref.bestScore = m_score;
+    }
+
+    public void GameOver()
+    {
+        if (IsConponentnull()) return;
+        state = GameState.Gameover;
+        Debug.Log("GameOver!!!");
     }
 }

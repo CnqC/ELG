@@ -11,7 +11,7 @@ public class Player : MonoBehaviour, IComponentChecking
     public float blockCheckingRadius;
     public float blockCheckingOffset;
 
-    public GameObject lanvfx; // hiểu ứng khi mà người chơi đáp xuống bề mặt block.
+    public GameObject lanvfxPb; // hiểu ứng khi mà người chơi đáp xuống bề mặt block.
 
     private Vector3 m_CenterPos;
      
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour, IComponentChecking
 
     public bool IsConponentnull()
     {
-                bool checking = m_rb == null || m_anim == null;
+                bool checking = m_rb == null || m_anim == null ;
         if (checking) // if checking = true;
             Debug.Log("Some component is null !! Please check.");
 
@@ -51,6 +51,12 @@ public class Player : MonoBehaviour, IComponentChecking
     void Update()
     {
         if (m_isDead || IsConponentnull()) return;
+
+
+        // cố định vị trí của hero trên từng frame sẽ giữ vị trí đứng giữa
+        transform.position = new Vector3(0, transform.position.y, 0f);
+
+
 
         Jump();
 
@@ -139,8 +145,25 @@ public class Player : MonoBehaviour, IComponentChecking
         if (col.gameObject.CompareTag(GameTag.Block.ToString()))
         {
             Block block = col.gameObject.GetComponent<Block>();
-            if (block) // nếu block != null
+            if (block && block.Id != m_blockId)
+            { // nếu block != null , và id của block khác với cái Id block ở trong nhân vật
+
+                m_blockId = block.Id; // gán giá trị block trong player = với giá trị id của block
+
+                // add SCore
+                GameManager.Ins.AddScore(block.CurScore);
                 block.PlayerLand();
+            }
+                                // những điểm giao tiếp giữa 2 đối tượng khi va chạm
+            if(col != null && col.contactCount > 0 && lanvfxPb)
+            {
+                // tạo ra hiệu ứng khi ng chơi đáp vào block
+                Vector3 spawnPos = new Vector3(transform.position.x,
+                    col.contacts[0].point.y,transform.position.z);
+                //col.contacts[] là mảng các điểm tiếp xúc, point.y là ở vị trí y của điểm tiếp xúc khi mà ng chơi va chạm block
+
+                Instantiate(lanvfxPb,spawnPos,Quaternion.identity);
+            }
 
             Debug.Log("da va cham vs blok");
         }
@@ -149,9 +172,15 @@ public class Player : MonoBehaviour, IComponentChecking
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag(GameTag.DeadZone.ToString()))
+        if (col.CompareTag(GameTag.DeadZone.ToString()) && !m_isDead) // va chạm vùng chết, và ng chơi chưa chết 
         {
-            Debug.Log(" da va cham voi deadz");
+            if (IsConponentnull()) return;
+            m_isDead = true;
+            m_anim.SetTrigger(ChacAnim.Dead.ToString());
+
+            // thay đổi layer của player thành dead
+            gameObject.layer = LayerMask.NameToLayer(GameLayer.Dead.ToString());
+            GameManager.Ins.GameOver(); 
         }
     }
 }
