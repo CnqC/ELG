@@ -151,7 +151,7 @@ MonoBehaviour:
   moveSpeed: 3
   moveDirection: 0
   canMove: 0
-  blockGrap: 0
+  blockGrap: 1
   sprites:
   - {fileID: 21300000, guid: 0f5d02c51c87c984295a2331674c5f37, type: 3}
   - {fileID: 21300000, guid: ad0708c0eb6a69b439b4ca811b8ad58b, type: 3}

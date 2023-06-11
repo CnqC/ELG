@@ -130,7 +130,12 @@ public class Block : MonoBehaviour,IComponentChecking
         // thay đổi sprite
         m_Sp.sprite = sprites[idx]; // thay đổi hình ảnh ( sprite) của m_sp thông qua hình ảnh trong mảng sprites ở trên
 
+        idx++; // tăng biến idx lên 
 
+        // ktra nếu mà tham số idx >= độ dài của mảng sprites --> thì ta sẽ trả giá trị của là 0
+        // chạy hết sprite sẽ quay lại sprite đầu tiên
+        if (idx >= sprites.Length)
+            idx = 0;
 
     }
 }

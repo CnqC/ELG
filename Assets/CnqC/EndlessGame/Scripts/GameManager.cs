@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
 
     private Player m_curPlayer;
     private Block m_curBlock;
-    private LevelItem m_curLevel;
+    private LevelItem m_curLevel; 
 
     private Vector2 m_camSize;
     private int m_blockIdx;
@@ -36,7 +36,9 @@ public class GameManager : MonoBehaviour,IComponentChecking
     // Start is called before the first frame update
     void Start()
     {
-        Init(); 
+        Init();
+
+        StartCoroutine(SpawnBlockCo());
     }
 
    public void Init()
@@ -88,6 +90,101 @@ public class GameManager : MonoBehaviour,IComponentChecking
                 m_curPlayer = Instantiate(newPlayerPb, new Vector3(0, -1f, 0f), Quaternion.identity);
 
 
+        }
+    }
+
+    // tạo ra 1 courotine cho việc spawn ra block
+
+    IEnumerator SpawnBlockCo()
+    {
+        if (IsConponentnull() || m_curLevel == null || m_curBlock == null) yield return null;
+
+        var blockPrebfab = m_curLevel.blockPb;
+        
+
+        if (blockPrebfab)
+            yield return null;
+
+            while (state != GameState.Gameover) // kiểm tra trạng thái có phải G.OVer k --> nếu phải thì thôi
+        {
+            m_blockSpawnPosY += m_curBlock.blockGrap; // nếu mà block sau spawn sẽ tăng thêm 1 theo trục Y bằng 1 khoảng blockGrap
+
+            // cứ mỗi vòng lập while thì block mới được tạo sẽ tăng lên 1 tốc độ += speedup
+            m_blockSpeed += speedUp;
+
+            // giới hạn blockspeed
+            m_blockSpeed = Mathf.Clamp(m_blockSpeed, m_curLevel.baseSpeed, m_curLevel.maxSpeed);
+
+
+            float checking = Random.Range(0f, 1f);
+
+            SpriteRenderer PrevBlockSp = m_curBlock.Sp; // lấy ra spriteRender trong block hiện tại
+
+            // trước khi game bắt đầu thì sẽ có  thông báo cho người dùng biết được là sắp tạo ra block
+            GameObject WarningSignClone = null;
+
+            if(checking <= 0.5f)
+            {
+                // x = nữa chiều rộng của Camara - 0,3f  
+                Vector3 spawnPos = new Vector3(m_camSize.x/2  - 0.3f, m_blockSpawnPosY, 0f);
+
+                WarningSignClone = Instantiate(warningSignPb, spawnPos, Quaternion.identity);
+
+                // vì hình mặc định khi mà tạo ra warningsign thì nó hình hướng sang phải , ta sẽ chỉnh phần scale x của nó thành âm thì sẽ quay lại sang trái 
+                WarningSignClone.transform.localScale = new Vector3(
+                    WarningSignClone.transform.localScale.x * (-1)
+                    , WarningSignClone.transform.localScale.y
+                    , WarningSignClone.transform.localScale.z);
+            }
+            else
+            {
+                Vector3 spawnPos = new Vector3(-(m_camSize.x / 2 - 0.3f), m_blockSpawnPosY, 0f);
+
+                WarningSignClone = Instantiate(warningSignPb, spawnPos, Quaternion.identity);
+            }
+
+
+                yield return new WaitForSeconds(m_curLevel.spawnTime); // tạo ra spawnTime để sinh ra các block 
+            
+                if(checking <= 0.5f)
+                {
+                    // tạo ra vị trị spawn của các block
+                    // vị trí của X của block sẽ = 1 nữa phải trục X của Camara +0.6f ( để block nằm ngoài và di chuyển từ từ vào)
+                    Vector3 spawnPos = new Vector3((m_camSize.x / 2 + 0.6f), m_blockSpawnPosY, 0f);
+
+                    // tạo ra block
+                    m_curBlock = Instantiate(blockPrebfab, spawnPos, Quaternion.identity);
+
+                // cho block di chuyển sang bên trái vì block được tạo bên phải
+
+                m_curBlock.moveDirection = MoveDirection.Right;
+                }
+                else
+                {
+                    // vị trí của X của block sẽ = 1 nữa trái  trục X của Camara +0.6f ( để block nằm ngoài và di chuyển từ từ vào)
+                    Vector3 spawnPos = new Vector3(-(m_camSize.x / 2 + 0.6f), m_blockSpawnPosY, 0f);
+
+                    // tạo ra block
+                    m_curBlock = Instantiate(blockPrebfab, spawnPos, Quaternion.identity);
+
+
+                    // cho block di chuyển sang bên phải vì block được tạo bên trái
+
+                    m_curBlock.moveDirection = MoveDirection.Left;
+            }
+
+            // thay đổi lần lượt các sprite ở trong block
+            m_curBlock.ChangeSprite(ref m_blockIdx);
+
+            m_curBlock.SpriteOrderUp(PrevBlockSp); // tăng lên sprites của block sau lên 1 đơn orderinlayer
+
+            m_curBlock.canMove = true; // cho di chuyển
+
+
+            m_curBlock.moveSpeed = m_blockSpeed; // gán giá trị của blockspeed cho vào tốc độ của block.
+
+            if (WarningSignClone) // nếu mà warningsign được tạo ra khác rỗng thì xóa nó
+                Destroy(WarningSignClone);
         }
     }
 
