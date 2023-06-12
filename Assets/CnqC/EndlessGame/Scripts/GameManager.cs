@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour,IComponentChecking
 
         // lấy ra level hiện taị
         m_curLevel = LevelManager.Ins.GetLevel();
+        m_blockIdx = 1; // làm cho nó không trùng với block đầu tiên trong mảng các block
+
         Pref.hasBestScore = false;
 
         if(m_curLevel != null)

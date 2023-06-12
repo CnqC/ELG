@@ -162,8 +162,8 @@ MonoBehaviour:
     blockPb: {fileID: 676485356, guid: a36688efee9afc34da956f5ad02b42f1, type: 3}
     mapPrefab: {fileID: 8942168729270340868, guid: 06ce5b32f503fd04eb74c98a60018819, type: 3}
     spawnTime: 1.8
-    baseSpeed: 1
-    maxSpeed: 3
+    baseSpeed: 0.5
+    maxSpeed: 2
   - scoreRequire: 500
     unlockThumb: {fileID: 21300000, guid: 4c3b7e502bcd6ec42a384726e3799c44, type: 3}
     lockThumb: {fileID: 21300000, guid: ce457276cb754dc4da5e4d7edb52cc3c, type: 3}
@@ -326,25 +326,25 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.22
-    y: -0.16
-    width: 1.42
-    height: 1.05
+    x: 0
+    y: 0
+    width: 1.3
+    height: 1.13
   near clip plane: 0.3
-  far clip plane: 1004.17
+  far clip plane: 998.06
   field of view: 60
   orthographic: 1
-  orthographic size: 7.05
-  m_Depth: -1
+  orthographic size: 7.8
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 0
+  m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 0
+  m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 0
@@ -358,7 +358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.74, y: -2.48, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

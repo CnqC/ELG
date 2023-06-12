@@ -174,7 +174,7 @@ public class Player : MonoBehaviour, IComponentChecking
     {
         if (col.CompareTag(GameTag.DeadZone.ToString()) && !m_isDead) // va chạm vùng chết, và ng chơi chưa chết 
         {
-            if (IsConponentnull()) return;
+            
             m_isDead = true;
             m_anim.SetTrigger(ChacAnim.Dead.ToString());
 
