@@ -225,6 +225,9 @@ public class GameManager : MonoBehaviour,IComponentChecking
     {
         if (IsConponentnull()) return;
         state = GameState.Gameover;
+
+        // bật rung cam khi va chạm và chết
+        CamShake.ins.ShakeTrigger();
         Debug.Log("GameOver!!!");
     }
 }

@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de58f27ce351dbb4e82a45832b3dcac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForece: 8
+  jumpForece: 10
   blockLayer:
     serializedVersion: 2
     m_Bits: 64
