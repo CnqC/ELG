@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 1289399202363750943}
   - component: {fileID: 1289399202363750942}
   - component: {fileID: 3117795490338516950}
+  - component: {fileID: 2876879723108027941}
   m_Layer: 0
   m_Name: Background_3_Ground
   m_TagString: Untagged
@@ -313,6 +314,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.08, y: 1.4040761}
   m_EdgeRadius: 0
+--- !u!114 &2876879723108027941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289399202363750940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7a7022f420ad84caa527e28f2c8329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1289399202738767685
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1289399202738767684}
+  - component: {fileID: 4693833016355736547}
   m_Layer: 0
   m_Name: Map03
   m_TagString: Untagged
@@ -345,6 +359,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4693833016355736547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289399202738767685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fb70171adbbcd4497dca97ee369436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sp: {fileID: 1289399203259420929}
+  resetScale: 1
+  fitX: 1
+  fitY: 1
+  offsetX: 0.01
+  offsetY: 0.01
+  isOverride: 0
 --- !u!1 &1289399202743481291
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +420,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1289399203259420934}
   - component: {fileID: 1289399203259420929}
-  - component: {fileID: 1554401425749760649}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -464,25 +496,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1554401425749760649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1289399203259420935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fb70171adbbcd4497dca97ee369436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sp: {fileID: 1289399203259420929}
-  resetScale: 1
-  fitX: 1
-  fitY: 1
-  offsetX: 0.01
-  offsetY: 0.01
-  isOverride: 0
 --- !u!1 &1289399203498072926
 GameObject:
   m_ObjectHideFlags: 0

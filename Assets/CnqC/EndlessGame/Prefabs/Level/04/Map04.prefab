@@ -177,6 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8812523043298423153}
+  - component: {fileID: 3529496135390181826}
   m_Layer: 0
   m_Name: Map04
   m_TagString: Untagged
@@ -200,6 +201,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3529496135390181826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3158582935317551919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fb70171adbbcd4497dca97ee369436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sp: {fileID: 2296704056852689703}
+  resetScale: 1
+  fitX: 1
+  fitY: 1
+  offsetX: 0.01
+  offsetY: 0.01
+  isOverride: 0
 --- !u!1 &3218577636494664887
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +315,7 @@ GameObject:
   - component: {fileID: 380153242553437307}
   - component: {fileID: 4445577950020088438}
   - component: {fileID: 3602947384698172822}
+  - component: {fileID: 9010035511819306676}
   m_Layer: 0
   m_Name: Background_4_Ground
   m_TagString: Untagged
@@ -395,6 +416,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.08, y: 1.387557}
   m_EdgeRadius: 0
+--- !u!114 &9010035511819306676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5272100653999755638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7a7022f420ad84caa527e28f2c8329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6332019974398547736
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +590,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1446908728484560024}
   - component: {fileID: 2296704056852689703}
-  - component: {fileID: 7980130293913617824}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -635,25 +667,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7980130293913617824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7331501020481628462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fb70171adbbcd4497dca97ee369436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sp: {fileID: 2296704056852689703}
-  resetScale: 1
-  fitX: 1
-  fitY: 1
-  offsetX: 0.01
-  offsetY: 0.01
-  isOverride: 0
 --- !u!1 &8479013092936927917
 GameObject:
   m_ObjectHideFlags: 0

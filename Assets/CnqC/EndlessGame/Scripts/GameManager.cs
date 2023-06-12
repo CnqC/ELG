@@ -91,7 +91,8 @@ public class GameManager : MonoBehaviour,IComponentChecking
             if (newPlayerPb)
                 m_curPlayer = Instantiate(newPlayerPb, new Vector3(0, -1f, 0f), Quaternion.identity);
 
-
+            if (m_curPlayer)
+                CameraFollow.Ins.target = m_curPlayer.transform;
         }
     }
 
