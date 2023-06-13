@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 780643943544124467}
   - component: {fileID: 780643943544124466}
   - component: {fileID: 780643943544124465}
+  - component: {fileID: 8995066701020067892}
   m_Layer: 5
   m_Name: LevelItem
   m_TagString: Untagged
@@ -276,6 +277,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8995066701020067892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780643943544124479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f479fe05687b7174f83ef0303fd9e14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreRequireText: {fileID: 780643943732579229}
+  lockThumb: {fileID: 780643942604284960}
+  UnlockThumb: {fileID: 780643942171271922}
+  btn: {fileID: 780643943544124465}
 --- !u!1 &780643943732579227
 GameObject:
   m_ObjectHideFlags: 0
