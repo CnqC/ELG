@@ -24,6 +24,7 @@ public enum ChacAnim // lưu lại tham số của phần animator
     Idle,
     Jump,
     Land,
+    Shake,
     Dead
 } 
 
