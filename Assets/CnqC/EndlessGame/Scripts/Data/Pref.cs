@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CnqC.EndLessGame;
-
+using UnityEngine.SceneManagement;
 
 public static class Pref 
 {
@@ -76,4 +76,6 @@ public static class Pref
            // dữ liệu mà chưa lưu thì xuất defaultvalue
 
     }
+
+    
 }
