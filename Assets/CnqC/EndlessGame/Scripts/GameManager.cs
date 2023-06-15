@@ -37,8 +37,6 @@ public class GameManager : MonoBehaviour,IComponentChecking
     void Start()
     {
         Init();
-
-        StartCoroutine(SpawnBlockCo());
     }
 
    public void Init()
@@ -75,7 +73,13 @@ public class GameManager : MonoBehaviour,IComponentChecking
         }
 
         ActivePlayer();
+
+
+        GUIManager.Ins.ShowGameGUI(false); // hiện HomeGUi, ẩn gameGUI
     }
+
+
+
 
     public void ActivePlayer()
     {
@@ -129,7 +133,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
             if(checking <= 0.5f)
             {
                 // x = nữa chiều rộng của Camara - 0,3f  
-                Vector3 spawnPos = new Vector3(m_camSize.x/2  + 0.3f, m_blockSpawnPosY, 0f);
+                Vector3 spawnPos = new Vector3(m_camSize.x/2  -1.3f, m_blockSpawnPosY, 0f);
 
                 WarningSignClone = Instantiate(warningSignPb, spawnPos, Quaternion.identity);
 
@@ -141,7 +145,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
             }
             else
             {
-                Vector3 spawnPos = new Vector3(-(m_camSize.x /2 + 0.3f), m_blockSpawnPosY, 0f);
+                Vector3 spawnPos = new Vector3(-(m_camSize.x /2 -1.3f), m_blockSpawnPosY, 0f);
 
                 WarningSignClone = Instantiate(warningSignPb, spawnPos, Quaternion.identity);
             }
@@ -153,7 +157,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
                 {
                     // tạo ra vị trị spawn của các block
                     // vị trí của X của block sẽ = 1 nữa phải trục X của Camara +0.6f ( để block nằm ngoài và di chuyển từ từ vào)
-                    Vector3 spawnPos = new Vector3((m_camSize.x / 2 - 0.8f), m_blockSpawnPosY, 0f);
+                    Vector3 spawnPos = new Vector3((m_camSize.x / 2 - 1.3f), m_blockSpawnPosY, 0f);
 
                     // tạo ra block
                     m_curBlock = Instantiate(blockPrebfab, spawnPos, Quaternion.identity);
@@ -165,7 +169,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
                 else
                 {
                     // vị trí của X của block sẽ = 1 nữa trái  trục X của Camara +0.6f ( để block nằm ngoài và di chuyển từ từ vào)
-                    Vector3 spawnPos = new Vector3(-(m_camSize.x / 2 - 0.8f), m_blockSpawnPosY, 0f);
+                    Vector3 spawnPos = new Vector3(-(m_camSize.x / 2 - 1.3f), m_blockSpawnPosY, 0f);
 
                     // tạo ra block
                     m_curBlock = Instantiate(blockPrebfab, spawnPos, Quaternion.identity);
@@ -193,7 +197,7 @@ public class GameManager : MonoBehaviour,IComponentChecking
 
     public bool IsConponentnull()
     {
-        bool checking = LevelManager.Ins == null ;
+        bool checking = LevelManager.Ins == null || GUIManager.Ins == null ;
 
         if (checking) // if checking = true;
             Debug.Log("Some component is null !! Please check.");
@@ -210,6 +214,8 @@ public class GameManager : MonoBehaviour,IComponentChecking
         state = GameState.Playing;
 
         StartCoroutine(SpawnBlockCo());
+
+        GUIManager.Ins.ShowGameGUI(true); // show cái GameGUi khi game start
     }
 
 
@@ -219,6 +225,9 @@ public class GameManager : MonoBehaviour,IComponentChecking
 
         m_score += Score;
         Pref.bestScore = m_score;
+
+        // cập nhập score trong GUIManager thông qua biến m_score
+        GUIManager.Ins.UpdateScore(m_score);
     }
 
     public void GameOver()
@@ -228,6 +237,8 @@ public class GameManager : MonoBehaviour,IComponentChecking
 
         // bật rung cam khi va chạm và chết
         CamShake.ins.ShakeTrigger();
+        GUIManager.Ins.ShowGameOverImgTxt();
+
         Debug.Log("GameOver!!!");
     }
 }
