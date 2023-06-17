@@ -8,19 +8,16 @@ using UnityEngine.SceneManagement;
 
 public class PauseDiaLog : Dialog
 {
-    private Animator  m_anim;
-
-    private void Awake()
-    {
-        m_anim = GetComponent<Animator>();
-    }
+    
+    
+  
     public override void Show(bool isShow)
     {
         base.Show(isShow);
 
         Time.timeScale = 0f;
 
-        m_anim.SetTrigger(ChacAnim.Shake.ToString());
+      
     }
 
     public override void Close()
