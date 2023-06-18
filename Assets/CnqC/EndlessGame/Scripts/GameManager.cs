@@ -216,6 +216,11 @@ public class GameManager : MonoBehaviour,IComponentChecking
         StartCoroutine(SpawnBlockCo());
 
         GUIManager.Ins.ShowGameGUI(true); // show cái GameGUi khi game start
+
+        
+   
+
+        AudioController.Ins.PlayBackgroundMusic(); // khi mà playGame sẽ xuất nhạc
     }
 
 
@@ -228,6 +233,9 @@ public class GameManager : MonoBehaviour,IComponentChecking
 
         // cập nhập score trong GUIManager thông qua biến m_score
         GUIManager.Ins.UpdateScore(m_score);
+
+        AudioController.Ins.PlaySound(AudioController.Ins.score);
+
     }
 
     public void GameOver()
@@ -237,8 +245,11 @@ public class GameManager : MonoBehaviour,IComponentChecking
 
         // bật rung cam khi va chạm và chết
         CamShake.ins.ShakeTrigger();
-        GUIManager.Ins.ShowGameOverImgTxt();
+        GUIManager.Ins.ShowGameOverImgTxt(); 
+        AudioController.Ins.StopPlayMusic();
+        AudioController.Ins.PlaySound(AudioController.Ins.gameover); // thêm sound GameOver khi chết
 
+        Debug.Log(Pref.bestScore);
         Debug.Log("GameOver!!!");
     }
 }

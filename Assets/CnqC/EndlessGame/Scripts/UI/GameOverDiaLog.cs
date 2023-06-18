@@ -23,6 +23,8 @@ public class GameOverDiaLog : Dialog
         {
             if (bestScoreTxt)
                 bestScoreTxt.text = $"NEW BEST: {Pref.bestScore}";
+
+            AudioController.Ins.PlaySound(AudioController.Ins.bestScore); // phát âm thanh khi đạt bestScore
         }
         else
         {

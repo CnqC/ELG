@@ -112,6 +112,7 @@ public class Block : MonoBehaviour,IComponentChecking
         canMove = false;
 
         m_rb.velocity = Vector2.zero;
+     
     }
 
     public void SpriteOrderUp(SpriteRenderer preBlockSp) // tăng cái order in layer lên

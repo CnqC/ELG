@@ -101,6 +101,9 @@ public class LevelDiaLog : Dialog,IComponentChecking
 
             // vì ta đã qua scene làm UI 
             SceneManager.LoadScene(GameScene.GamePlay.ToString());
+
+            // chuyển từ menuScene sang GameScene sẽ off nhạc bên menu 
+            AudioController.Ins.StopPlayMusic();
         }
     }
 }

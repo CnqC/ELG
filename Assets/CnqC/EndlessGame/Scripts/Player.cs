@@ -66,7 +66,7 @@ public class Player : MonoBehaviour, IComponentChecking
             {
                 m_anim.SetBool(ChacAnim.Jump.ToString(), false) ; // phải tắt jump trước khi nhận ra là nhân vật đang ở block, nếu k tắt thì nó sẽ hiện palyer ở animation nhảy hoài luôn
                 m_anim.SetBool(ChacAnim.Land.ToString(), true);
-
+              
 
             }
             else // nếu kiểm tra thấy k có trên block thì chuyển sang vị trí on air
@@ -117,12 +117,12 @@ public class Player : MonoBehaviour, IComponentChecking
         m_anim.SetBool(ChacAnim.Jump.ToString(),true); // vì enum là dạng số nguyên, nên ta sẽ chuyển dạng enum thành dạng chuỗi
         m_anim.SetBool(ChacAnim.Land.ToString(), false); // vì khi đang ở trên không thì nó sẽ không chạm đất
 
-        
+        AudioController.Ins.PlaySound(AudioController.Ins.jump);// Tạo ra âm thanh nhảy
     }
 
     public void BacktoIdle()
     {
-       
+        
         m_anim.SetBool(ChacAnim.Land.ToString(), false);
 
         m_anim.SetTrigger(ChacAnim.Idle.ToString());
@@ -164,7 +164,7 @@ public class Player : MonoBehaviour, IComponentChecking
 
                 Instantiate(lanvfxPb,spawnPos,Quaternion.identity);
             }
-
+            AudioController.Ins.PlaySound(AudioController.Ins.Land); // va chạm với block và xuất nhạc  
             Debug.Log("da va cham vs blok");
         }
     }

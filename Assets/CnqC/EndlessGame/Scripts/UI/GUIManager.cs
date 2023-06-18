@@ -4,6 +4,7 @@ using UnityEngine;
 using CnqC.EndLessGame;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class GUIManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class GUIManager : MonoBehaviour
     private void Awake()
     {
         Ins = this;
+        
     }
 
     public void ShowGameGUI(bool isShow)
@@ -26,7 +28,10 @@ public class GUIManager : MonoBehaviour
         // chỉ có 1 cái được hiện là homeGUI hay GameGUI nên ta tạo 1 phương thức để xử lý việc này.
         // nếu mà gameGUi != null --> sẽ được hiện thị theo biến isShow 
         if (gameGUI)
-            gameGUI.SetActive(isShow);
+        
+        gameGUI.SetActive(isShow);
+        
+        
 
         // nếu mà homeGUi != null --> sẽ được hiện thị ngược lại theo biến isShow 
         if (homeGUI)
@@ -37,8 +42,9 @@ public class GUIManager : MonoBehaviour
     // cập nhập các UI
     public void UpdateScore( int score)
     {
-        if (scoreCountingText)
-            scoreCountingText.text = score.ToString();
+      
+        if (scoreCountingText) 
+        scoreCountingText.text = score.ToString();
     }
 
 
@@ -54,11 +60,15 @@ public class GUIManager : MonoBehaviour
             gameOverImgTxt.gameObject.SetActive(false); // tắt đi cái GameOverText;
 
         if (gameOverDiaLog)
-            gameOverDiaLog.gameObject.SetActive(true); // xuất cái GameOverDiaLog lên màn hình
+            gameOverDiaLog.Show(true); // xuất cái GameOverDiaLog lên màn hình
+        scoreCountingText.enabled = false;
+
     }
 
     public void ShowGameOverImgTxt()
     {
         StartCoroutine(ShowGameOverTextCo());
     }
+
+   
 }

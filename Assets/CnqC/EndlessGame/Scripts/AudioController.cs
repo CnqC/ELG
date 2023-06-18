@@ -5,7 +5,7 @@ using CnqC.EndLessGame;
 
 public class AudioController : MonoBehaviour
 {
-    public static AudioController ins;
+    public static AudioController Ins;
 
     [Header("Main Settings:")]
     [Range(0, 1)]
@@ -22,6 +22,7 @@ public class AudioController : MonoBehaviour
     public AudioClip[] menus;
     public AudioClip btnClick;
     public AudioClip jump;
+    public AudioClip Land;
     public AudioClip score;
     public AudioClip bestScore;
     public AudioClip gameover;
@@ -126,9 +127,9 @@ public class AudioController : MonoBehaviour
 
     void MakeSingleton()
     {
-        if (ins == null)
+        if (Ins == null)
         {
-            ins = this;
+            Ins = this;
             DontDestroyOnLoad(this);
         }
         else
