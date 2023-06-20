@@ -1518,7 +1518,7 @@ MonoBehaviour:
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
   m_enableExtraPadding: 1
-  checkPaddingRequired: 1
+  checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
@@ -2855,6 +2855,7 @@ GameObject:
   - component: {fileID: 7941007992835686812}
   - component: {fileID: 2461968487006604124}
   - component: {fileID: 7941007992835686813}
+  - component: {fileID: 7941007992835686814}
   m_Layer: 5
   m_Name: 'Sound Button '
   m_TagString: Untagged
@@ -3537,6 +3538,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11289c38043a84d4e88b85a9bbdb17fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7941007992835686814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353653344254241378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43e5f33f7148994a82ca8e80ebaedc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: {fileID: 21300000, guid: 202caf08486758c47899294f02654a89, type: 3}
+  off: {fileID: 21300000, guid: b51087dd5d3ff5d41870314891413800, type: 3}
 --- !u!222 &8061092305500790659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3570,6 +3585,7 @@ GameObject:
   - component: {fileID: 1588009217544769744}
   - component: {fileID: 5571664506053815427}
   - component: {fileID: 8138716417149908005}
+  - component: {fileID: 8138716417149908006}
   m_Layer: 5
   m_Name: 'Music Button '
   m_TagString: Untagged
@@ -3589,6 +3605,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11289c38043a84d4e88b85a9bbdb17fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8138716417149908006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138716417149908004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae4377e34e95974d9648c22a23c5613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: {fileID: 21300000, guid: 22868c05ba217034b8ee8ab1cb62a691, type: 3}
+  off: {fileID: 21300000, guid: d8ab51a976be54c469bdc14ace93a41e, type: 3}
 --- !u!222 &8305899968222971250
 CanvasRenderer:
   m_ObjectHideFlags: 0
