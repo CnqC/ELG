@@ -182,7 +182,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 80f722939a8d7ef428115532166d7460, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -4353,7 +4353,7 @@ MonoBehaviour:
     spawnTime: 1.8
     baseSpeed: 0.5
     maxSpeed: 2
-  - scoreRequire: 500
+  - scoreRequire: 5
     unlockThumb: {fileID: 21300000, guid: 4c3b7e502bcd6ec42a384726e3799c44, type: 3}
     lockThumb: {fileID: 21300000, guid: ce457276cb754dc4da5e4d7edb52cc3c, type: 3}
     levelBG: {fileID: 21300000, guid: 9796aa959de7a284fb127714ec9fd760, type: 3}
@@ -4364,7 +4364,7 @@ MonoBehaviour:
     spawnTime: 1.5
     baseSpeed: 1.5
     maxSpeed: 4
-  - scoreRequire: 2000
+  - scoreRequire: 25
     unlockThumb: {fileID: 21300000, guid: 8aeae683b993b634f80b2007f7fc8356, type: 3}
     lockThumb: {fileID: 21300000, guid: b3678bb301230834bbb903e5fcbbbcba, type: 3}
     levelBG: {fileID: 21300000, guid: 6eff91a9d18ffe843b00fa283011c7a9, type: 3}
@@ -4375,7 +4375,7 @@ MonoBehaviour:
     spawnTime: 1.2
     baseSpeed: 1.8
     maxSpeed: 5
-  - scoreRequire: 4000
+  - scoreRequire: 26
     unlockThumb: {fileID: 21300000, guid: fa7c3f41625bc4f4aaf9d7e95348f91b, type: 3}
     lockThumb: {fileID: 21300000, guid: 57476981ff60b204b93975b7b212494a, type: 3}
     levelBG: {fileID: 21300000, guid: f10a125912bd0774291123c7bd2ef62f, type: 3}
@@ -4386,7 +4386,7 @@ MonoBehaviour:
     spawnTime: 1
     baseSpeed: 2
     maxSpeed: 6
-  - scoreRequire: 5000
+  - scoreRequire: 29
     unlockThumb: {fileID: 21300000, guid: 3125f7a4b1046804f81ac91ac136e222, type: 3}
     lockThumb: {fileID: 21300000, guid: 6e39e1f6e0f7aba4ba5ec8196de5f664, type: 3}
     levelBG: {fileID: 21300000, guid: e946416deddab954cab77261a85b425c, type: 3}
@@ -4397,7 +4397,7 @@ MonoBehaviour:
     spawnTime: 0.8
     baseSpeed: 2.5
     maxSpeed: 6.5
-  - scoreRequire: 8000
+  - scoreRequire: 30
     unlockThumb: {fileID: 21300000, guid: ae3732503e911304da6df8d6535e3252, type: 3}
     lockThumb: {fileID: 21300000, guid: c1c5aeb4155d92845b8e109ebae35b9b, type: 3}
     levelBG: {fileID: 21300000, guid: 6ee07791623a1764b82001aa613614d1, type: 3}

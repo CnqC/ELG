@@ -324,5 +324,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3d74fe54c41bc5e4f831e1b478aed2b8, type: 3}
   - {fileID: 21300000, guid: a66d5e41f371bdc4a985cf7a04ecd33a, type: 3}
   - {fileID: 21300000, guid: da3305d38e9319d489b28e93f7ab9851, type: 3}
-  minScore: 0
-  maxScore: 0
+  minScore: 5
+  maxScore: 12

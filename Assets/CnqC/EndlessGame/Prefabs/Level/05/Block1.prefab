@@ -244,8 +244,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 851af8d77a660564abd288bfcd7aad8a, type: 3}
   - {fileID: 21300000, guid: 6da0a6a6cfa6fcd469de244325599fa9, type: 3}
   - {fileID: 21300000, guid: defd30783b0d86846a5639ab459c5911, type: 3}
-  minScore: 0
-  maxScore: 0
+  minScore: 8
+  maxScore: 15
 --- !u!1 &4272443472238423576
 GameObject:
   m_ObjectHideFlags: 0

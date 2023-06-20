@@ -37,6 +37,7 @@ public class PauseDiaLog : Dialog
 
     public void Replay()
     {
+        Close();
         // tạo ra sự kiện cho button Replay trong GameOverDiaLog để quạy lại GameGUI
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
