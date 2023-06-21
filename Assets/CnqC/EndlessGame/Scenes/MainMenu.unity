@@ -4350,9 +4350,9 @@ MonoBehaviour:
     playerPb: {fileID: 733063239, guid: 7b053b71c50b69a48a56efbb4ca30b0c, type: 3}
     blockPb: {fileID: 676485356, guid: a36688efee9afc34da956f5ad02b42f1, type: 3}
     mapPrefab: {fileID: 8942168729270340868, guid: 06ce5b32f503fd04eb74c98a60018819, type: 3}
-    spawnTime: 1.8
-    baseSpeed: 0.5
-    maxSpeed: 2
+    spawnTime: 1.6
+    baseSpeed: 1.2
+    maxSpeed: 2.5
   - scoreRequire: 5
     unlockThumb: {fileID: 21300000, guid: 4c3b7e502bcd6ec42a384726e3799c44, type: 3}
     lockThumb: {fileID: 21300000, guid: ce457276cb754dc4da5e4d7edb52cc3c, type: 3}
@@ -4361,9 +4361,9 @@ MonoBehaviour:
     playerPb: {fileID: 1170283268949198958, guid: b7fe722c73d1a4644940058d80ece127, type: 3}
     blockPb: {fileID: -4898592582701476850, guid: 248ef4589719c1444987cf7bfc823224, type: 3}
     mapPrefab: {fileID: 5048217661982007116, guid: 44bbf08ce21cded4bb25c65f66bb33db, type: 3}
-    spawnTime: 1.5
+    spawnTime: 1.4
     baseSpeed: 1.5
-    maxSpeed: 4
+    maxSpeed: 4.5
   - scoreRequire: 25
     unlockThumb: {fileID: 21300000, guid: 8aeae683b993b634f80b2007f7fc8356, type: 3}
     lockThumb: {fileID: 21300000, guid: b3678bb301230834bbb903e5fcbbbcba, type: 3}
@@ -4373,7 +4373,7 @@ MonoBehaviour:
     blockPb: {fileID: 5741326586822185474, guid: 1198d3f4dfd7fb7499dff1533909b18f, type: 3}
     mapPrefab: {fileID: 1289399202738767685, guid: b0997f03bd9657646ad7f47a2421e295, type: 3}
     spawnTime: 1.2
-    baseSpeed: 1.8
+    baseSpeed: 2
     maxSpeed: 5
   - scoreRequire: 26
     unlockThumb: {fileID: 21300000, guid: fa7c3f41625bc4f4aaf9d7e95348f91b, type: 3}
@@ -4384,8 +4384,8 @@ MonoBehaviour:
     blockPb: {fileID: 4005176374844231363, guid: d24b50c5b6d29f14abd72a8345c890e6, type: 3}
     mapPrefab: {fileID: 3158582935317551919, guid: 18205a3b473a000498329f5b369046e8, type: 3}
     spawnTime: 1
-    baseSpeed: 2
-    maxSpeed: 6
+    baseSpeed: 2.5
+    maxSpeed: 6.5
   - scoreRequire: 29
     unlockThumb: {fileID: 21300000, guid: 3125f7a4b1046804f81ac91ac136e222, type: 3}
     lockThumb: {fileID: 21300000, guid: 6e39e1f6e0f7aba4ba5ec8196de5f664, type: 3}
@@ -4395,8 +4395,8 @@ MonoBehaviour:
     blockPb: {fileID: -6221529363906712950, guid: 16cd1b922d99ab1439099aafb290d2b3, type: 3}
     mapPrefab: {fileID: 7630250649881092974, guid: 0aed34f9f300b5648995d5009ac8755b, type: 3}
     spawnTime: 0.8
-    baseSpeed: 2.5
-    maxSpeed: 6.5
+    baseSpeed: 2.8
+    maxSpeed: 8.5
   - scoreRequire: 30
     unlockThumb: {fileID: 21300000, guid: ae3732503e911304da6df8d6535e3252, type: 3}
     lockThumb: {fileID: 21300000, guid: c1c5aeb4155d92845b8e109ebae35b9b, type: 3}
@@ -4405,9 +4405,9 @@ MonoBehaviour:
     playerPb: {fileID: 6938735297530574579, guid: 9b6ba9868ba3ea5448bab8f9d76db64c, type: 3}
     blockPb: {fileID: 8498648666366219142, guid: 4b6e70cd4ab1ffb43b3ccdefa267821b, type: 3}
     mapPrefab: {fileID: 8243907496600341782, guid: 93ce2dae581c0284381fef3360080aba, type: 3}
-    spawnTime: 0.7
+    spawnTime: 0.75
     baseSpeed: 3
-    maxSpeed: 8
+    maxSpeed: 10
 --- !u!4 &1867795350
 Transform:
   m_ObjectHideFlags: 0

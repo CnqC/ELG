@@ -168,10 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de58f27ce351dbb4e82a45832b3dcac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForece: 7
+  jumpForece: 7.5
   blockLayer:
     serializedVersion: 2
     m_Bits: 64
-  blockCheckingRadius: 0.5
-  blockCheckingOffset: 0.7
+  blockCheckingRadius: 0.55
+  blockCheckingOffset: 0.8
   lanvfxPb: {fileID: 1326107649640221532, guid: 91ece4d27b773354ca5bee4ecb3df551, type: 3}
