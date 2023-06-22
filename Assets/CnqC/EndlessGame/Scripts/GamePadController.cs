@@ -6,6 +6,7 @@ using CnqC.EndLessGame;
 // viết code cho những input bàn phím chuột hay pad
 
 public class GamePadController : MonoBehaviour
+
 {
     public bool isOnMoblie;
     public static GamePadController ins; // singleton
