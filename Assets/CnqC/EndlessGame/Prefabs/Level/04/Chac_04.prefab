@@ -172,6 +172,6 @@ MonoBehaviour:
   blockLayer:
     serializedVersion: 2
     m_Bits: 64
-  blockCheckingRadius: 0.6
-  blockCheckingOffset: 0.8
+  blockCheckingRadius: 0.5
+  blockCheckingOffset: 0.7
   lanvfxPb: {fileID: 6155897354641791393, guid: dfc0fd51bc17dbf4ab4cb91bc0f621ec, type: 3}
