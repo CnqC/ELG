@@ -4,7 +4,7 @@
 This is a game made with unity, the goal is to get the most points from jumping and dodging blocks.
 
 ### Video Demo game
-https://github.com/CnqC/DGB/assets/130760728/85f06e37-bfd8-41c5-8cf7-14352323b760
+https://github.com/CnqC/ELG/assets/130760728/18e21861-36ad-4906-b56d-6282fee3dd00
 
 #### Tools & Language
 - Unity (Game Engine)
